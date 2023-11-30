@@ -1,22 +1,50 @@
-/* Home.module.css */
 
-.products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos para el panel de filtros */
+.filters {
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  width: 30%;
+}
+.filters.form-row{
+  width: 100%;
+}
+
+/* Resto de estilos para los filtros */
+
+/* Estilos para los productos */
+.products {
+  padding: 20px;
+  width: 65%;
+}
+
+/* Ajustes para mostrar dos columnas por fila */
+.product-item {
+  width: calc(25% - 20px); /* Ancho del 50% con márgenes entre elementos */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left:30px;
+  box-sizing: border-box; /* Incluye el padding y border en el ancho */
+  float: left; /* Alineación en línea */
+  height: 300px; /* Altura fija para cada producto */
+}
+
+.product-item:nth-child(odd) {
+  clear: both; /* Inicio de una nueva fila */
+}
+
+/* Estilos para la imagen */
+.product-item img {
   
-  .product-item {
-    width: 300px;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .product-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  height: 200px; /* Altura fija para la imagen */
+  margin: 0 auto;
+  display: table;
+}
+
+/* Resto de estilos para los elementos de producto */

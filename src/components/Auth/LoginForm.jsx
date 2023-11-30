@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import './LoginForm.css'; // Importa los estilos
 
@@ -29,7 +30,10 @@ const LoginForm = () => {
       
       if (response.data.token) {
         sessionStorage.setItem('token', response.data.token);
+        console.log("si")
         window.location.href = "/"// Redirige a la raíz
+      } else {
+        console.log("no")
       }
 
     } catch (error) {
