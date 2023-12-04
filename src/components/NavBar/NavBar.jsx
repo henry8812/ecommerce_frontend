@@ -1,35 +1,18 @@
-// Navbar.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './NavBar.module.css'; // Asegúrate de tener el archivo CSS del módulo
 
 const Navbar = () => {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logo}>
-       
-      
-
+    <nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div className="container">
+        <a className="navbar-brand" href="/">Navbar</a>
+        <div className="nav">
+          <Link to="/" className="nav-link active" aria-current="page">Products</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/pricing" className="nav-link">Pricing</Link>
+          <Link to="/admin" className="nav-link">Admin</Link>
+        </div>
       </div>
-      <ul className={styles.navLinks}>
-        <li>
-          <Link to="/products">Productos</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contacto</Link>
-        </li>
-        <li>
-          <Link to="/about">Sobre Nosotros</Link>
-        </li>
-        <li className={styles.dropdown}>
-          <button className={styles.dropbtn}>Perfil</button>
-          <div className={styles.dropdownContent}>
-            <Link to="/profile">Mi Perfil</Link>
-            <Link to="/logout">Cerrar Sesión</Link>
-          </div>
-        </li>
-      </ul>
     </nav>
   );
 };

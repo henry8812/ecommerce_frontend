@@ -1,0 +1,46 @@
+{
+    "IMAGES" : {
+        "BASE" : "http://localhost:3500/storage/images/"
+    },
+    "AUTH": {
+      "LOGIN": {
+        "path" : "http://localhost:3500/api/auth/login",
+        "method" : "POST"
+      },
+      "REFRESH" : {
+        "path" : "http://localhost:3500/api/auth/login",
+        "method" : "POST"
+      }
+
+    },
+    "PRODUCTS": {
+        "LIST" : {
+            "path" : "http://localhost:3500/api/products/",
+            "method" : "GET"
+          },
+          "LIST_CATEGORIES" : {
+            "path" : "http://localhost:3500/api/categories/",
+            "method" : "GET"
+          },
+          "CREATE" : {
+            "path" : "http://localhost:3500/api/products/",
+            "method" : "POST"
+          },
+          "UPDATE" : {
+            "path" : "http://localhost:3500/api/products/",
+            "method" : "POST"
+          },
+          
+          "DELETE" : {
+            "path" : "http://localhost:3500/api/products/",
+                "method" : "DELETE"
+          }
+          
+    
+
+    },
+    "USERS": {
+  
+    }
+  }
+  
